@@ -34,8 +34,8 @@ app.use(fileUpload());
 
 app.all('*', bindUser)
 app.use('/auth', authRouter)
-app.use('/authRiders', authRidersRouter)
-app.use('/authDrivers', authDriversRouter)
+app.use('/auth/riders', authRidersRouter)
+app.use('/auth/drivers', authDriversRouter)
 
 
 app.use('/ecommerce', ecommerceRouter)
