@@ -18,6 +18,7 @@ const ecommerceRouter = require("./routes/ecommerce/ecommerceRouter");
 const authRouter = require("./routes/auth/authRouter");
 
 const authRidersRouter = require("./routes/auth/auth_riders.router");
+const authDriversRouter = require("./routes/auth/auth_drivers.router");
 
 const serviceRouter = require("./routes/service/serviceRouter");
 const partenaireRouter = require("./routes/partenaire/partenaireRouter");
@@ -34,6 +35,8 @@ app.use(fileUpload());
 app.all('*', bindUser)
 app.use('/auth', authRouter)
 app.use('/authRiders', authRidersRouter)
+app.use('/authDrivers', authDriversRouter)
+
 
 app.use('/ecommerce', ecommerceRouter)
 app.use('/resto', restoRouter)
